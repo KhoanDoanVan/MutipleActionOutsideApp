@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct AppIntent_Siri_QuickAction_WidgetApp: App {
+    
+    @StateObject private var appState = AppState()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(appState)
         }
     }
 }

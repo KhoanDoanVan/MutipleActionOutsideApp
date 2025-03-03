@@ -7,7 +7,45 @@
 		<key>AppIntent-Siri,QuickAction,Widget.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>AppIntent-WidgetExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>MyWidgetExtension 1.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>MyWidgetExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>46219CBE2D704DAD00F24930</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>46226B142D756ABC000E30CB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>466281652D759D8B009371EF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>466281BA2D75A1AF009371EF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
