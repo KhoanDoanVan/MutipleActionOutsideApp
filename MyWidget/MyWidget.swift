@@ -1,6 +1,6 @@
 //
-//  TaskWidget.swift
-//  AppIntent-Siri,QuickAction,Widget
+//  MyWidget.swift
+//  WidgetLinking-iOS
 //
 //  Created by Đoàn Văn Khoan on 3/3/25.
 //
@@ -11,7 +11,7 @@ import SwiftUI
 @main
 struct MyWidget: Widget {
     
-    let kind: String = "MyWidget"
+    let kind: String = "Widget"
     
     
     var body: some WidgetConfiguration {

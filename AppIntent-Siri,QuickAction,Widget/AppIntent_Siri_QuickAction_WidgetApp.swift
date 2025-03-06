@@ -10,12 +10,23 @@ import SwiftUI
 @main
 struct AppIntent_Siri_QuickAction_WidgetApp: App {
     
-    @StateObject private var appState = AppState()
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @StateObject private var appState = AppState.shared
+    @StateObject private var actionService = ActionService.shared
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(appState)
+                .onReceive(actionService.$action) { action in
+                    if let appRoute = action {
+                        print("🔗 Navigating to: \(appRoute)")
+                        DispatchQueue.main.async {
+                            appState.path.append(appRoute)
+                            actionService.action = nil
+                        }
+                    }
+                }
         }
     }
 }

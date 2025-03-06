@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		466281BE2D75A1AF009371EF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 466281BD2D75A1AF009371EF /* WidgetKit.framework */; };
-		466281C02D75A1AF009371EF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 466281BF2D75A1AF009371EF /* SwiftUI.framework */; };
+		463E41A92D794BE10064B390 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 463E41A82D794BE10064B390 /* WidgetKit.framework */; };
+		463E41AB2D794BE10064B390 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 463E41AA2D794BE10064B390 /* SwiftUI.framework */; };
+		463E41B62D794BE20064B390 /* MyWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 463E41A62D794BE10064B390 /* MyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		466281C92D75A1B0009371EF /* PBXContainerItemProxy */ = {
+		463E41B42D794BE20064B390 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46219CB72D704DAD00F24930 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 466281BA2D75A1AF009371EF;
+			remoteGlobalIDString = 463E41A52D794BE10064B390;
 			remoteInfo = MyWidgetExtension;
 		};
 /* End PBXContainerItemProxy section */
@@ -28,6 +29,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				463E41B62D794BE20064B390 /* MyWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -36,20 +38,10 @@
 
 /* Begin PBXFileReference section */
 		46219CBF2D704DAD00F24930 /* AppIntent-Siri,QuickAction,Widget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppIntent-Siri,QuickAction,Widget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		466281BB2D75A1AF009371EF /* MyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		466281BD2D75A1AF009371EF /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
-		466281BF2D75A1AF009371EF /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		463E41A62D794BE10064B390 /* MyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		463E41A82D794BE10064B390 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		463E41AA2D794BE10064B390 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		466281CE2D75A1B0009371EF /* Exceptions for "MyWidget" folder in "MyWidgetExtension" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 466281BA2D75A1AF009371EF /* MyWidgetExtension */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		46219CC12D704DAD00F24930 /* AppIntent-Siri,QuickAction,Widget */ = {
@@ -57,11 +49,8 @@
 			path = "AppIntent-Siri,QuickAction,Widget";
 			sourceTree = "<group>";
 		};
-		466281C12D75A1AF009371EF /* MyWidget */ = {
+		463E41AC2D794BE10064B390 /* MyWidget */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				466281CE2D75A1B0009371EF /* Exceptions for "MyWidget" folder in "MyWidgetExtension" target */,
-			);
 			path = MyWidget;
 			sourceTree = "<group>";
 		};
@@ -75,12 +64,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		466281B82D75A1AF009371EF /* Frameworks */ = {
+		463E41A32D794BE10064B390 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				466281C02D75A1AF009371EF /* SwiftUI.framework in Frameworks */,
-				466281BE2D75A1AF009371EF /* WidgetKit.framework in Frameworks */,
+				463E41AB2D794BE10064B390 /* SwiftUI.framework in Frameworks */,
+				463E41A92D794BE10064B390 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,8 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				46219CC12D704DAD00F24930 /* AppIntent-Siri,QuickAction,Widget */,
-				466281C12D75A1AF009371EF /* MyWidget */,
-				466281BC2D75A1AF009371EF /* Frameworks */,
+				463E41AC2D794BE10064B390 /* MyWidget */,
+				463E41A72D794BE10064B390 /* Frameworks */,
 				46219CC02D704DAD00F24930 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,16 +90,16 @@
 			isa = PBXGroup;
 			children = (
 				46219CBF2D704DAD00F24930 /* AppIntent-Siri,QuickAction,Widget.app */,
-				466281BB2D75A1AF009371EF /* MyWidgetExtension.appex */,
+				463E41A62D794BE10064B390 /* MyWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		466281BC2D75A1AF009371EF /* Frameworks */ = {
+		463E41A72D794BE10064B390 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				466281BD2D75A1AF009371EF /* WidgetKit.framework */,
-				466281BF2D75A1AF009371EF /* SwiftUI.framework */,
+				463E41A82D794BE10064B390 /* WidgetKit.framework */,
+				463E41AA2D794BE10064B390 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -130,7 +119,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				466281CA2D75A1B0009371EF /* PBXTargetDependency */,
+				463E41B52D794BE20064B390 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				46219CC12D704DAD00F24930 /* AppIntent-Siri,QuickAction,Widget */,
@@ -142,26 +131,26 @@
 			productReference = 46219CBF2D704DAD00F24930 /* AppIntent-Siri,QuickAction,Widget.app */;
 			productType = "com.apple.product-type.application";
 		};
-		466281BA2D75A1AF009371EF /* MyWidgetExtension */ = {
+		463E41A52D794BE10064B390 /* MyWidgetExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 466281CB2D75A1B0009371EF /* Build configuration list for PBXNativeTarget "MyWidgetExtension" */;
+			buildConfigurationList = 463E41B82D794BE20064B390 /* Build configuration list for PBXNativeTarget "MyWidgetExtension" */;
 			buildPhases = (
-				466281B72D75A1AF009371EF /* Sources */,
-				466281B82D75A1AF009371EF /* Frameworks */,
-				466281B92D75A1AF009371EF /* Resources */,
+				463E41A22D794BE10064B390 /* Sources */,
+				463E41A32D794BE10064B390 /* Frameworks */,
+				463E41A42D794BE10064B390 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				466281C12D75A1AF009371EF /* MyWidget */,
+				463E41AC2D794BE10064B390 /* MyWidget */,
 			);
 			name = MyWidgetExtension;
 			packageProductDependencies = (
 			);
 			productName = MyWidgetExtension;
-			productReference = 466281BB2D75A1AF009371EF /* MyWidgetExtension.appex */;
+			productReference = 463E41A62D794BE10064B390 /* MyWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -177,7 +166,7 @@
 					46219CBE2D704DAD00F24930 = {
 						CreatedOnToolsVersion = 16.0;
 					};
-					466281BA2D75A1AF009371EF = {
+					463E41A52D794BE10064B390 = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
@@ -197,7 +186,7 @@
 			projectRoot = "";
 			targets = (
 				46219CBE2D704DAD00F24930 /* AppIntent-Siri,QuickAction,Widget */,
-				466281BA2D75A1AF009371EF /* MyWidgetExtension */,
+				463E41A52D794BE10064B390 /* MyWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -210,7 +199,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		466281B92D75A1AF009371EF /* Resources */ = {
+		463E41A42D794BE10064B390 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -227,7 +216,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		466281B72D75A1AF009371EF /* Sources */ = {
+		463E41A22D794BE10064B390 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -237,10 +226,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		466281CA2D75A1B0009371EF /* PBXTargetDependency */ = {
+		463E41B52D794BE20064B390 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 466281BA2D75A1AF009371EF /* MyWidgetExtension */;
-			targetProxy = 466281C92D75A1B0009371EF /* PBXContainerItemProxy */;
+			target = 463E41A52D794BE10064B390 /* MyWidgetExtension */;
+			targetProxy = 463E41B42D794BE20064B390 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -369,6 +358,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "AppIntent-Siri,QuickAction,Widget/AppIntent-Siri,QuickAction,Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppIntent-Siri,QuickAction,Widget/Preview Content\"";
@@ -376,7 +366,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AppIntent-Siri-QuickAction-Widget-Info.plist";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_NSSiriUsageDescription = "App cần quyền truy cập Siri để mở nhanh các tính năng.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -399,6 +389,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "AppIntent-Siri,QuickAction,Widget/AppIntent-Siri,QuickAction,Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppIntent-Siri,QuickAction,Widget/Preview Content\"";
@@ -406,7 +397,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AppIntent-Siri-QuickAction-Widget-Info.plist";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_NSSiriUsageDescription = "App cần quyền truy cập Siri để mở nhanh các tính năng.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -424,7 +415,7 @@
 			};
 			name = Release;
 		};
-		466281CC2D75A1B0009371EF /* Debug */ = {
+		463E41B92D794BE20064B390 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -451,7 +442,7 @@
 			};
 			name = Debug;
 		};
-		466281CD2D75A1B0009371EF /* Release */ = {
+		463E41BA2D794BE20064B390 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -499,11 +490,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		466281CB2D75A1B0009371EF /* Build configuration list for PBXNativeTarget "MyWidgetExtension" */ = {
+		463E41B82D794BE20064B390 /* Build configuration list for PBXNativeTarget "MyWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				466281CC2D75A1B0009371EF /* Debug */,
-				466281CD2D75A1B0009371EF /* Release */,
+				463E41B92D794BE20064B390 /* Debug */,
+				463E41BA2D794BE20064B390 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

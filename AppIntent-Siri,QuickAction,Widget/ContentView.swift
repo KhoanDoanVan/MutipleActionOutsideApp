@@ -30,9 +30,24 @@ struct ContentView: View {
                 
                 Spacer()
             }
+            .onOpenURL { url in
+                handleDeepLink(url)
+            }
             .background(Color.gray)
         }
     }
+    
+    private func handleDeepLink(_ url: URL) {
+        print("🔹 Received deep link: \(url)")
+        if let route = AppRoute.fromWidget(url) {
+            DispatchQueue.main.async {
+                appState.path.append(route)
+            }
+        } else {
+            print("❌ Invalid deep link")
+        }
+    }
+
 }
 
 #Preview {

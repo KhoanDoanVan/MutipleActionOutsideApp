@@ -5,9 +5,54 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.simonisdev.AppIntent-Siri-QuickAction-Widget</string>
+			<string>simonisdev.AppIntent-Siri-QuickAction-Widget</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>simonisdev</string>
+			</array>
 		</dict>
+		<dict/>
+		<dict/>
+	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>simonisdev</string>
+	</array>
+	<key>NSUserActivityTypes</key>
+	<string>com.simonisdev.openApp</string>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+	</dict>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Navi to Profile</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.simonisdev.AppIntent-Siri-QuickAction-Widget.profile</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Navi to Settings</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.simonisdev.AppIntent-Siri-QuickAction-Widget.settings</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Navi to Home</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.simonisdev.AppIntent-Siri-QuickAction-Widget.home</string>
+		</dict>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>processing</string>
 	</array>
 </dict>
 </plist>

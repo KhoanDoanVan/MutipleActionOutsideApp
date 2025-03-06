@@ -1,6 +1,6 @@
 //
 //  ActionService.swift
-//  AppIntent-Siri,QuickAction,Widget
+//  WidgetLinking-iOS
 //
 //  Created by Đoàn Văn Khoan on 3/3/25.
 //

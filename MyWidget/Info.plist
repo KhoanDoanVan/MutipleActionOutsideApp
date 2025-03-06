@@ -2,6 +2,27 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>simonisdev.AppIntent-Siri-QuickAction-Widget.settings</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Navi to Settings</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>simonisdev.AppIntent-Siri-QuickAction-Widget.profile</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Navi to Profile</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>simonisdev.AppIntent-Siri-QuickAction-Widget.home</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Navi to Home</string>
+		</dict>
+	</array>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionPointIdentifier</key>
