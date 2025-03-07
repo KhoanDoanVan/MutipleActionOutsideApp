@@ -23,7 +23,7 @@ class SceneDelegate: NSObject, UIWindowSceneDelegate {
         options connectionOptions: UIScene.ConnectionOptions
     ) {
         print("✅ SceneDelegate is running")
-                
+        
         let contentView = ContentView()
             .environmentObject(appState)
 
@@ -59,17 +59,4 @@ class SceneDelegate: NSObject, UIWindowSceneDelegate {
             }
         }
     }
-    
-    //  MARK: - Shortcut
-    func windowScene(
-        _ windowScene: UIWindowScene,
-        performActionFor shortcutItem: UIApplicationShortcutItem,
-        completionHandler: @escaping (Bool) -> Void
-    ) {
-        print("🔹 Quick Action Triggered: \(shortcutItem.type)")
-        actionService.action = AppRoute.fromShortcut(shortcutItem)
-        
-        completionHandler(true)
-    }
-    
 }

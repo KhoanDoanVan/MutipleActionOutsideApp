@@ -15,7 +15,7 @@ enum AppRoute: String, CaseIterable, Hashable, Codable, AppEnum {
     case settings
     
     static var typeDisplayRepresentation: TypeDisplayRepresentation {
-            "App Route"
+        "App Route"
     }
 
     static var caseDisplayRepresentations: [AppRoute: DisplayRepresentation] {
@@ -26,6 +26,16 @@ enum AppRoute: String, CaseIterable, Hashable, Codable, AppEnum {
         ]
     }
     
+    init?(rawValue: String) {
+        switch rawValue.lowercased() {
+        case "home": self = .home
+        case "profile": self = .profile
+        case "settings": self = .settings
+        default:
+            print("❌ Invalid AppRoute: \(rawValue)")
+            return nil
+        }
+    }
     
     static func fromWidget(_ url: URL) -> AppRoute? {
         guard let path = url.host else {

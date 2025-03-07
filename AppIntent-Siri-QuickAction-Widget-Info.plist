@@ -6,12 +6,12 @@
 	<array>
 		<dict>
 			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
+			<string>Viewer</string>
 			<key>CFBundleURLName</key>
 			<string>simonisdev.AppIntent-Siri-QuickAction-Widget</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>simonisdev</string>
+				<string>simonisdev.AppIntent-Siri-QuickAction-Widget</string>
 			</array>
 		</dict>
 		<dict/>
@@ -19,10 +19,8 @@
 	</array>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-		<string>simonisdev</string>
+		<string>simonisdev.AppIntent-Siri-QuickAction-Widget</string>
 	</array>
-	<key>NSUserActivityTypes</key>
-	<string>com.simonisdev.openApp</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -48,11 +46,6 @@
 			<key>UIApplicationShortcutItemType</key>
 			<string>com.simonisdev.AppIntent-Siri-QuickAction-Widget.home</string>
 		</dict>
-	</array>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>fetch</string>
-		<string>processing</string>
 	</array>
 </dict>
 </plist>

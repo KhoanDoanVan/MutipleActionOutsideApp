@@ -26,6 +26,18 @@ struct ContentView: View {
                     case .settings: SettingsView()
                     }
                 }
+                .navigationDestination(isPresented: Binding(
+                    get: { appState.selectedRoute != nil },
+                    set: { _ in appState.selectedRoute = nil }
+                )) {
+                    if let route = appState.selectedRoute {
+                        switch route {
+                        case .home: HomeView()
+                        case .profile: ProfileView()
+                        case .settings: SettingsView()
+                        }
+                    }
+                }
                 
                 
                 Spacer()

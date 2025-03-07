@@ -19,9 +19,18 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         
         print("✅ AppDelegate is running...") 
         
+//        if let shortcutItem = options.shortcutItem {
+//            print("From shortcut")
+//            actionService.action = AppRoute.fromShortcut(shortcutItem)
+//        }
+        
         if let shortcutItem = options.shortcutItem {
-            print("From shortcut")
-            actionService.action = AppRoute.fromShortcut(shortcutItem)
+            if let appRoute = AppRoute.fromShortcut(shortcutItem) {
+                print("🔗 Launched from Shortcut: \(appRoute)")
+                actionService.action = appRoute
+            } else {
+                print("❌ Invalid Shortcut Item: \(shortcutItem.type)")
+            }
         }
         
         let configuration = UISceneConfiguration(
@@ -43,19 +52,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         }
         
         return true
-    }
-    
-    func application(_ application: UIApplication,
-                     continue userActivity: NSUserActivity,
-                     restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-        if let urlString = userActivity.userInfo?["url"] as? String,
-           let url = URL(string: urlString) {
-            DispatchQueue.main.async {
-                UIApplication.shared.open(url)
-            }
-            return true
-        }
-        return false
     }
 }
 
