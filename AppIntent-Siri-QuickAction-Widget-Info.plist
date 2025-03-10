@@ -6,7 +6,7 @@
 	<array>
 		<dict>
 			<key>CFBundleTypeRole</key>
-			<string>Viewer</string>
+			<string>None</string>
 			<key>CFBundleURLName</key>
 			<string>simonisdev.AppIntent-Siri-QuickAction-Widget</string>
 			<key>CFBundleURLSchemes</key>
@@ -14,18 +14,11 @@
 				<string>simonisdev.AppIntent-Siri-QuickAction-Widget</string>
 			</array>
 		</dict>
-		<dict/>
-		<dict/>
 	</array>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-		<string>simonisdev.AppIntent-Siri-QuickAction-Widget</string>
+		<string>shortcuts</string>
 	</array>
-	<key>UIApplicationSceneManifest</key>
-	<dict>
-		<key>UIApplicationSupportsMultipleScenes</key>
-		<false/>
-	</dict>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>

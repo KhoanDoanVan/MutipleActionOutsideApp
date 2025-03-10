@@ -11,19 +11,14 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     
     private let actionService = ActionService.shared
     
+    
     func application(
         _ application: UIApplication,
         configurationForConnecting connectingSceneSession: UISceneSession,
         options: UIScene.ConnectionOptions
     ) -> UISceneConfiguration {
         
-        print("✅ AppDelegate is running...") 
-        
-//        if let shortcutItem = options.shortcutItem {
-//            print("From shortcut")
-//            actionService.action = AppRoute.fromShortcut(shortcutItem)
-//        }
-        
+        print("✅ AppDelegate is running...")
         if let shortcutItem = options.shortcutItem {
             if let appRoute = AppRoute.fromShortcut(shortcutItem) {
                 print("🔗 Launched from Shortcut: \(appRoute)")
@@ -42,7 +37,11 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         return configuration
     }
     
-    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+    func application(
+        _ application: UIApplication,
+        open url: URL,
+        options: [UIApplication.OpenURLOptionsKey : Any] = [:]
+    ) -> Bool {
         print("📌 Deep Link Received: \(url)")
 
         guard let route = AppRoute.fromWidget(url) else { return false }

@@ -34,11 +34,17 @@ import Intents
 //        print("✅ Valid URL: \(url.absoluteString)")
 //
 //        await MainActor.run {
+//            if UIApplication.shared.canOpenURL(url) {
+//                print("Can open URL")
+//            } else {
+//                print("Cannot open URL")
+//            }
 //            UIApplication.shared.open(url, options: [:]) { success in
 //                print("✅ Open App Success: \(success)")
 //            }
 //        }
 //    }
+//    
 //}
 
 
@@ -49,11 +55,83 @@ struct OpenAppIntent: AppIntent {
     @Parameter(title: "Destination")
     var destination: AppRoute
 
+//    func perform() async throws -> some IntentResult {
+//        guard let url = URL(string: "simonisdev.AppIntent-Siri-QuickAction-Widget://\(destination.rawValue)") else {
+//            print("🚨 Invalid URL")
+//            return .result()
+//        }
+//
+//        await MainActor.run {
+//            
+//            if UIApplication.shared.canOpenURL(url) {
+//                                
+//                UIApplication.shared.open(url, options: [:]) { success in
+//                    print("✅ Open App Success: \(success)")
+//                }
+//            } else {
+//                print("🚨 Cannot open URL")
+//            }
+//        }
+//
+//        
+//        return .result()
+//    }
+    
+//    func perform() async throws -> some IntentResult {
+//        guard let url = URL(string: "simonisdev.AppIntent-Siri-QuickAction-Widget://\(destination.rawValue)") else {
+//            print("🚨 Invalid URL")
+//            return .result()
+//        }
+//
+//        print("🔗 Attempting to open URL: \(url)")
+//
+//        let canOpen = await MainActor.run {
+//            UIApplication.shared.canOpenURL(url)
+//        }
+//
+//        if canOpen {
+//            await MainActor.run {
+//                UIApplication.shared.open(url) { success in
+//                    print(success == true ? "✅ Open App Success" : "🚨 Cannot open URL")
+//                }
+//            }
+//            
+//        } else {
+//            print("🚨 App không thể mở URL, kiểm tra Info.plist!")
+//        }
+//
+//        return .result()
+//    }
     func perform() async throws -> some IntentResult {
-        DispatchQueue.main.async {
-            NotificationCenter.default.post(name: .openView, object: destination.rawValue)
+        let shortcutName = "MyShortcutName"
+        let input = "SomeInput"
+
+        guard let encodedName = shortcutName.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+              let encodedInput = input.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+            print("🚨 URL Encoding Failed")
+            return .result()
         }
-        return .result(opensIntent: self)
+
+        let urlString = "shortcuts://run-shortcut?name=\(encodedName)&input=\(encodedInput)"
+
+        guard let url = URL(string: urlString) else {
+            print("🚨 Invalid URL")
+            return .result()
+        }
+
+        print("🔗 Attempting to open URL: \(url)")
+
+        await MainActor.run {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:]) { success in
+                    print(success ? "✅ Shortcut Triggered Successfully" : "🚨 Failed to Trigger Shortcut")
+                }
+            } else {
+                print("🚨 Cannot open Shortcuts app, check system settings!")
+            }
+        }
+
+        return .result()
     }
 }
 

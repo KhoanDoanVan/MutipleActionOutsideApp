@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		461FEF992D7EE01300622A30 /* AppIntent-Siri-QuickAction-Widget-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 461FEF982D7EE01300622A30 /* AppIntent-Siri-QuickAction-Widget-Info.plist */; };
 		463E41A92D794BE10064B390 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 463E41A82D794BE10064B390 /* WidgetKit.framework */; };
 		463E41AB2D794BE10064B390 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 463E41AA2D794BE10064B390 /* SwiftUI.framework */; };
 		463E41B62D794BE20064B390 /* MyWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 463E41A62D794BE10064B390 /* MyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -37,6 +38,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		461FEF982D7EE01300622A30 /* AppIntent-Siri-QuickAction-Widget-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppIntent-Siri-QuickAction-Widget-Info.plist"; sourceTree = "<group>"; };
 		46219CBF2D704DAD00F24930 /* AppIntent-Siri,QuickAction,Widget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppIntent-Siri,QuickAction,Widget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		463E41A62D794BE10064B390 /* MyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		463E41A82D794BE10064B390 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -96,6 +98,7 @@
 				463E41AC2D794BE10064B390 /* MyWidget */,
 				463E41A72D794BE10064B390 /* Frameworks */,
 				46219CC02D704DAD00F24930 /* Products */,
+				461FEF982D7EE01300622A30 /* AppIntent-Siri-QuickAction-Widget-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -209,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				461FEF992D7EE01300622A30 /* AppIntent-Siri-QuickAction-Widget-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,10 +382,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AppIntent-Siri-QuickAction-Widget-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -407,10 +413,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AppIntent-Siri-QuickAction-Widget-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
