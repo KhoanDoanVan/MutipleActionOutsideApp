@@ -52,5 +52,25 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         
         return true
     }
+    
+    func application(
+        _ application: UIApplication,
+        continue userActivity: NSUserActivity,
+        restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void
+    ) -> Bool {
+        if userActivity.activityType == "com.simonisdev.AppIntent-Siri-QuickAction-Widget.openApp" {
+            if let routeString = userActivity.userInfo?["route"] as? String,
+               let route = AppRoute(rawValue: routeString) {
+                print("🔗 Received NSUserActivity with route: \(route)")
+                ActionService.shared.action = route
+                return true
+            } else {
+                print("❌ Invalid route in userInfo: \(String(describing: userActivity.userInfo))")
+            }
+        } else {
+            print("❌ Unknown activity type: \(userActivity.activityType)")
+        }
+        return false
+    }
 }
 

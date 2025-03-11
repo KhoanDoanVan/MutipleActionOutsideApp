@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct SettingsView: View {
+    let shortcut = createSiriShortcut(title: "Open Settings",
+                                      phrase: "Open Settings",
+                                      activityType: "com.simonisdev.AppIntent-Siri-QuickAction-Widget.openSettings")
+
     var body: some View {
-        Text("Settings View")
-            .navigationTitle("Settings View")
+        VStack {
+            Text("Settings View")
+                .navigationTitle("Settings")
+            
+            SiriButton(shortcut: shortcut).frame(height: 34)
+        }
     }
 }
 

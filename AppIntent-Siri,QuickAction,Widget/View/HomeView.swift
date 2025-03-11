@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct HomeView: View {
+    let shortcut = createSiriShortcut(title: "Open Home",
+                                      phrase: "Open Home",
+                                      activityType: "com.simonisdev.AppIntent-Siri-QuickAction-Widget.openHome")
+
     var body: some View {
-        Text("Home View")
-            .navigationTitle("Home")
+        VStack {
+            Text("Home View")
+                .navigationTitle("Home")
+            
+            SiriButton(shortcut: shortcut).frame(height: 34)
+        }
     }
 }
 

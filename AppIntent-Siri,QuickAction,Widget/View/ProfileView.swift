@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct ProfileView: View {
+    let shortcut = createSiriShortcut(title: "Open Profile",
+                                      phrase: "Show My Profile",
+                                      activityType: "com.simonisdev.AppIntent-Siri-QuickAction-Widget.openProfile")
+
     var body: some View {
-        Text("Profile")
-            .navigationTitle("Profile")
+        VStack {
+            Text("Profile")
+                .navigationTitle("Profile")
+            
+            SiriButton(shortcut: shortcut).frame(height: 34)
+        }
     }
 }
 

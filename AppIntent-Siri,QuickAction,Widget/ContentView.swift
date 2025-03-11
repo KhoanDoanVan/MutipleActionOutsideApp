@@ -38,6 +38,15 @@ struct ContentView: View {
                         }
                     }
                 }
+                .onContinueUserActivity("com.simonisdev.AppIntent-Siri-QuickAction-Widget.openHome") { activity in
+                    handleUserActivity(activity)
+                }
+                .onContinueUserActivity("com.simonisdev.AppIntent-Siri-QuickAction-Widget.openProfile") { activity in
+                    handleUserActivity(activity)
+                }
+                .onContinueUserActivity("com.simonisdev.AppIntent-Siri-QuickAction-Widget.openSettings") { activity in
+                    handleUserActivity(activity)
+                }
                 
                 
                 Spacer()
@@ -60,6 +69,18 @@ struct ContentView: View {
         }
     }
 
+    
+    private func handleUserActivity(_ userActivity: NSUserActivity) {
+        print("🔹 Received activity: \(userActivity.activityType)")
+
+        if let route = AppRoute.fromActivity(userActivity) {
+            DispatchQueue.main.async {
+                appState.path.append(route)
+            }
+        } else {
+            print("❌ Invalid activity type")
+        }
+    }
 }
 
 #Preview {

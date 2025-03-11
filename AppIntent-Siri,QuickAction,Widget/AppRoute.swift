@@ -52,5 +52,18 @@ enum AppRoute: String, CaseIterable, Hashable, Codable, AppEnum {
         print("From Shortcut")
         return AppRoute(rawValue: route)
     }
+    
+    static func fromActivity(_ activity: NSUserActivity) -> AppRoute? {
+            switch activity.activityType {
+        case "com.simonisdev.AppIntent-Siri-QuickAction-Widget.openHome":
+            return .home
+        case "com.simonisdev.AppIntent-Siri-QuickAction-Widget.openProfile":
+            return .profile
+        case "com.simonisdev.AppIntent-Siri-QuickAction-Widget.openSettings":
+            return .settings
+        default:
+            return nil
+        }
+    }
 }
 

@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>com.simonisdev.AppIntent-Siri-QuickAction-Widget.openHome</string>
+		<string>com.simonisdev.AppIntent-Siri-QuickAction-Widget.openProfile</string>
+		<string>com.simonisdev.AppIntent-Siri-QuickAction-Widget.openSettings</string>
+	</array>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -17,7 +23,7 @@
 	</array>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-		<string>shortcuts</string>
+		<string>simonisdev.AppIntent-Siri-QuickAction-Widget</string>
 	</array>
 	<key>UIApplicationShortcutItems</key>
 	<array>
